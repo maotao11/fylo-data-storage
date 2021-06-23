@@ -1,0 +1,177 @@
+body {
+  background-color: hsl(229, 57%, 11%);
+  background-image: url(images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0 auto;
+  color: white;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  font-family: raleway;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.box1 {
+  background-color: hsl(228, 56%, 26%);
+  margin-top: 150px;
+  width: 300px;
+  height: 170px;
+  padding: 15px;
+  border-radius: 10px 100px 10px 10px;
+}
+.logo {
+  margin: 20px 30px 25px 30px;
+}
+.icons {
+  margin-left: 20px;
+}
+.icons i {
+  margin: 12px;
+  transform: scale(1.4);
+  width: 20px;
+  text-align: center;
+  padding: 7px;
+  height: 18px;
+  border-radius: 20%;
+  background-color: hsl(229, 57%, 11%);
+  color: hsl(234, 54%, 69%);
+  transition: 0.2s;
+}
+.icons i:hover {
+  filter: saturate(2);
+  cursor: pointer;
+}
+
+.box2 {
+  text-align: center;
+  color: hsl(243, 100%, 93%);
+}
+.box2 span {
+  font-weight: 700;
+}
+
+.box3 {
+  display: flex;
+  gap: 200px;
+  font-size: 14px;
+  color: hsl(243, 100%, 93%);
+}
+
+.box4 {
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+  color: black;
+  border-radius: 10px;
+  margin-top: -50px;
+}
+.box4 :first-child {
+  font-size: 40px;
+  font-weight: 700;
+}
+.box4 :nth-child(2) {
+  font-weight: 600;
+  color: hsl(229, 7%, 55%);
+  font-size: 12px;
+  margin: 5px;
+}
+
+.container {
+  background-color: hsl(228, 56%, 26%);
+  padding: 15px 15px 40px 15px;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  background-color: hsl(229, 57%, 11%);
+  padding: 2px;
+}
+.progress-bar2 {
+  height: 15px;
+  width: 79%;
+  background-image: linear-gradient(
+    90deg,
+    hsl(6, 86%, 80%) 10%,
+    hsl(335, 84%, 59%),
+    hsl(6, 86%, 80%) 80%
+  );
+  border-radius: 10px;
+  animation: gradient 3s reverse infinite;
+  background-size: 900% 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.progress-bar3 {
+  background-color: white;
+  margin-left: 218px;
+  padding: 8px;
+  transform: scale(0.7);
+  border-radius: 50%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-image: url(images/bg-desktop.png);
+    background-attachment: unset;
+    background-position-y: 50vh;
+  }
+
+  .main-content {
+    flex-direction: row;
+    margin-top: 200px;
+  }
+  .container {
+    height: 100px;
+    margin: 195px 20px 20px 20px;
+    width: 500px;
+  }
+  .box3 {
+    gap: 400px;
+  }
+  .progress-bar3 {
+    margin-left: 375px;
+  }
+
+  .box4 {
+    margin-left: 600px;
+    margin-top: -450px;
+    position: relative;
+  }
+
+  .box4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: 54px;
+    margin-bottom: -15px;
+  }
+}

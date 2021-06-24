@@ -10,6 +10,7 @@ body {
   place-items: center;
   gap: 20px;
   font-family: raleway;
+  min-height:100%;
 }
 .main-content {
   display: flex;
@@ -48,7 +49,7 @@ body {
 }
 
 .box2 {
-  text-align: center;
+  text-align: left;
   color: hsl(243, 100%, 93%);
 }
 .box2 span {
